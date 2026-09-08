@@ -89,7 +89,17 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+/**
+ * Postmark Server API Token, used by the theme's
+ * ardee_send_via_postmark() function (see functions.php) to send
+ * contact-form enquiries. Kept here rather than in the theme so
+ * it never ends up in the theme editor, a theme zip, or version
+ * control.
+ *
+ * Replace the placeholder below with your real Server API Token
+ * from Postmark → your Server → API Tokens.
+ */
+define( 'ARDEE_POSTMARK_TOKEN', '2ac5b94a-ba9e-4b78-a51d-df07b6c488fa' );
 
 /* That's all, stop editing! Happy publishing. */
 

@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>Archival or present-day photograph of the founding Ardee Montessori House in New Delhi, exterior or entrance, with children arriving; if archival, a dignified black and white frame</span></div>
+	
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>About</span><span>/</span><span>Ardeeology</span></nav>
 		<div class="eyebrow light">Ardeeology</div>
@@ -53,7 +53,7 @@ get_header(); ?>
 <section class="section" id="mentor">
 	<div class="wrap g2">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A group of mentors in a training session at the Ardee Montessori Teacher Training Centre, practising a presentation with the binomial cube, adults only, natural light' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twe.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">The mentor</div><h2 class="title">Character, knowledge <em>and curiosity</em>.</h2></div>
@@ -132,7 +132,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', "A detail of a child's hands with the trinomial cube, the coloured blocks half assembled, warm light, shallow focus" ); ?>
+		<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/thirteen.jpg' ); ?>
 		</div>
 	</div>
 </section>

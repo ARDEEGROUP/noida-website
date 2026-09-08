@@ -12,14 +12,11 @@ get_header(); ?>
 
 <section class="hero home on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note">
-		<b>Hero image placeholder · 2400 by 1350, landscape</b>
-		<span>Wide establishing shot of the Noida House main environment at the start of the work cycle, children choosing materials from low open shelves, morning light through large windows, landscape 2400 by 1350</span>
-	</div>
+	
 	<div class="wrap">
 		<div class="eyebrow light">The Ardee Montessori House &middot; Noida</div>
-		<h1 class="display">A Pure Montessori Start, <em>the Ardee Way</em>.</h1>
-		<p class="lead">A dedicated Montessori House for children from 8 months to 6 years, part of The Ardee Schools: a family of five campuses that began as a single Montessori House in New Delhi in 2003 and now carries children from their first prepared environment through to Cambridge International Advanced Levels (A Levels).</p>
+		<h1 class="display">A Pure Montessori Beginning, <em>the Ardee Way</em>.</h1>
+		<p class="lead">A Montessori House for children from 8 months to 5+ years, part of The Ardee Schools: a family of five campuses that began as a Montessori House in New Delhi in 2003 and now carries children from their first prepared environment through to Cambridge International Advanced Levels. </p>
 		<div class="btn-row">
 			<a class="btn btn-red lg" href="<?php echo esc_url( ardee_link( 'contact' ) ); ?>">Enquire Now
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -48,19 +45,39 @@ get_header(); ?>
 			<div class="btn-row"><a class="btn btn-blue" href="<?php echo esc_url( ardee_link( 'philosophy' ) ); ?>">Our Philosophy</a><a class="btn btn-ghost" href="<?php echo esc_url( ardee_link( 'ardeeology' ) ); ?>">Read Ardeeology</a></div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', "A mentor kneeling at a child's eye level during a presentation of the pink tower on a floor mat, soft window light from the left, shelves of sensorial material in focus behind, no direct eye contact with camera" ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/tray.jpg' ); ?>
 		</div>
 	</div>
 </section>
 
 <section class="section off tight">
 	<div class="wrap">
-		<div class="head"><div class="eyebrow">At a glance</div><h2 class="title">Noida, <em>in brief</em>.</h2></div>
+		<div class="head"><div class="eyebrow">At a glance</div><h2 class="title">Ardee Montessori <em>House</em></h2></div>
 		<div class="g4 fade-up">
-			<div class="tile"><h4 class="h4">Ages</h4><p>The House serves children from 8 months to 6 years, from NIDO to the final year.</p></div>
-			<div class="tile"><h4 class="h4">Hours</h4><p>9:00 AM to 1:30 PM, Monday to Friday.</p></div>
-			<div class="tile"><h4 class="h4">Certified Montessori mentors</h4><p>Trained and certified Montessori educators support each child through observation and gentle guidance rather than instruction.</p></div>
-			<div class="tile"><h4 class="h4">Daily parent communication</h4><p>Photos, updates and classroom observations reach families through a daily parent communication app.</p></div>
+			<div class="tile"><h4 class="h4">Ages</h4><p>A pure Montessori journey from 8 months to 6 years, from NIDO through the final year. </p></div>
+			<div class="tile"><h4 class="h4">Hours</h4><p>Red <br>
+9:30 AM – 12:30 PM 
+Monday to Friday 
+</p>
+<br>
+<p>Blue 
+	<br> 
+9:00 AM – 1:15 PM 
+Monday to Friday </p>
+<br>
+<p>Yellow - EYFS 
+	<br>
+9:00 AM – 1:30 PM 
+Monday, Wednesday & Thurdays  
+</p>
+<br>
+<p>Enrichment :  
+
+9:00 – 2:15PM 
+Tuesday & Friday  </p></div>
+			<div class="tile"><h4 class="h4">Montessori-trained mentors</h4><p>Experienced Montessori educators observe, guide and support each child, allowing learning and independence to unfold naturally. 
+</p></div>
+			<div class="tile"><h4 class="h4">Strong connection with families</h4><p>A window into the child’s day through photographs, updates and classroom observations, shared with families through our parent communication app. </p></div>
 		</div>
 	</div>
 </section>
@@ -91,7 +108,7 @@ get_header(); ?>
 <section class="section">
 	<div class="wrap g2">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A three-year-old carrying a tray with a small jug and glass across the environment during the work cycle, other children working on mats in the background, natural light, shallow depth of field' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/one.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="eyebrow">A day at the House</div>
@@ -111,11 +128,11 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="head"><div class="eyebrow">Moments from the House</div><h2 class="title">A morning <em>in the environment</em>.</h2></div>
 		<div class="gallery fade-up">
-			<?php ardee_placeholder( '', 'Image placeholder · 1600 by 1600, square', 'Two children of different ages working together on the hundred board on a floor mat, seen from above at a slight angle, hands and tiles in focus' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1200 by 900, landscape', 'A child pouring water from a small jug at the practical life shelf, sleeves rolled, concentration on the face, sunlit' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1200 by 900, landscape', 'The outdoor play zone: a child watering a gardening patch with a small can, sandpit and low fence behind, morning light' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1200 by 900, landscape', 'A mentor and a child sitting side by side with the sandpaper letters, the child tracing a letter with two fingers' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1200 by 900, landscape', 'Children laying the table for the in-house meal: cloth napkins, small plates and a jug, one child carrying a basket of fruit' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/six.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/three.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/four.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/five.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/seve.jpg' ); ?>
 		</div>
 	</div>
 </section>

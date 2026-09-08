@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>The main environment in full use mid-morning: several children at individual work on mats and tables, one mentor giving a presentation in the middle distance, wide angle, natural light</span></div>
+	
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>Environments and Programmes</span></nav>
 		<div class="eyebrow light">Environments and Programmes</div>
@@ -16,8 +16,82 @@ get_header(); ?>
 </section>
 
 <div class="anchor-bar"><div class="wrap">
-	<a href="#nido">NIDO</a><a href="#red">Red</a><a href="#blue">Blue</a><a href="#eyfs">EYFS</a><a href="#areas">Areas of learning</a><a href="#sports">Montessori Sports</a><a href="#enrichment">Enrichment</a><a href="#beyond">Beyond the House</a>
+	<a href="#curriculum">Curriculum</a><a href="#nido">NIDO</a><a href="#red">Red</a><a href="#blue">Blue</a><a href="#yellow">Yellow</a><a href="#eyfs">EYFS</a>
 </div></div>
+
+<section class="section tight" id="curriculum">
+	<div class="wrap">
+		<div class="g2 top">
+
+			<div class="fade-up">
+				<div class="head" style="margin-bottom:20px">
+					<div class="eyebrow">Curriculum Overview</div>
+					<h2 class="title">The Full <em>Learning Journey</em></h2>
+				</div>
+				<div class="prose">
+					<p>At The Ardee Schools, education is conceived as a continuous and carefully considered journey, from Montessori foundations through to Cambridge.</p>
+					<p>Each Key Stage builds upon the last, combining the National Curriculum of England with Cambridge International Education to provide both breadth and depth of learning.</p>
+					<p>Our approach places equal emphasis on intellectual rigour and personal development. Students are encouraged to think independently, engage with curiosity, and develop a global outlook, preparing them not only for examinations, but for life beyond the classroom.</p>
+				</div>
+			</div>
+
+			<div class="fade-up d1">
+				<div class="pathway-card">
+					<div class="pathway-card-label">Cambridge Pathway</div>
+					<div class="pathway-list">
+
+						<div class="pathway-item">
+							<div class="pathway-rail"><span class="pathway-dot"></span><span class="pathway-line"></span></div>
+							<div class="pathway-body">
+								<div class="pathway-stage">Pre-Primary</div>
+								<div class="pathway-title">Early NIDO &ndash; EYFS</div>
+								<div class="pathway-sub">Montessori foundation</div>
+							</div>
+						</div>
+
+						<div class="pathway-item">
+							<div class="pathway-rail"><span class="pathway-dot"></span><span class="pathway-line"></span></div>
+							<div class="pathway-body">
+								<div class="pathway-stage">Primary &mdash; (Key Stages 1 &amp; 2)</div>
+								<div class="pathway-title">Years 1 &ndash; 5</div>
+								<div class="pathway-sub">Cambridge Primary with elements of Elementary Montessori</div>
+							</div>
+						</div>
+
+						<div class="pathway-item">
+							<div class="pathway-rail"><span class="pathway-dot"></span><span class="pathway-line"></span></div>
+							<div class="pathway-body">
+								<div class="pathway-stage">Lower Secondary &mdash; (Key Stage 3)</div>
+								<div class="pathway-title">Years 6 &ndash; 8</div>
+								<div class="pathway-sub">Cambridge Lower Secondary</div>
+							</div>
+						</div>
+
+						<div class="pathway-item">
+							<div class="pathway-rail"><span class="pathway-dot"></span><span class="pathway-line"></span></div>
+							<div class="pathway-body">
+								<div class="pathway-stage">IGCSE &mdash; (Key Stage 4)</div>
+								<div class="pathway-title">Years 9 &ndash; 10</div>
+								<div class="pathway-sub">A broad programme of study (typically eight subjects)</div>
+							</div>
+						</div>
+
+						<div class="pathway-item last">
+							<div class="pathway-rail"><span class="pathway-dot"></span></div>
+							<div class="pathway-body">
+								<div class="pathway-stage">A Level &mdash; (Key Stage 5)</div>
+								<div class="pathway-title">Years 11 &ndash; 12</div>
+								<div class="pathway-sub">Cambridge AS &amp; A Level (typically four subjects)</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
 
 <section class="section tight">
 	<div class="wrap">
@@ -47,7 +121,7 @@ get_header(); ?>
 	<div class="wrap">
 
 	<div class="env-block" id="nido">
-		<div class="env-media fade-up"><?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The NIDO environment: a parent and a toddler of about eighteen months seated on a low mat with the object permanence box, a mentor beside them, soft light, low camera angle at the child\'s height' ); ?></div>
+		<div class="env-media fade-up"><?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/forteen.jpg' ); ?></div>
 		<div class="fade-up d1">
 			<div class="label">from 8 months</div>
 			<h3 class="h3">NIDO <span style="font-weight:300;color:var(--ink-light)">&middot; the infant and toddler community</span></h3>
@@ -65,7 +139,7 @@ get_header(); ?>
 	</div>
 
 	<div class="env-block flip" id="red">
-		<div class="env-media fade-up"><?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The Red environment: a two-year-old spooning beans between two bowls at a small table, tongue between teeth in concentration, another child polishing a mirror behind' ); ?></div>
+		<div class="env-media fade-up"><?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/fifteen.jpg' ); ?></div>
 		<div class="fade-up d1">
 			<div class="label">from 2 years</div>
 			<h3 class="h3">Red <span style="font-weight:300;color:var(--ink-light)">&middot; Foundation Montessori</span></h3>
@@ -83,7 +157,7 @@ get_header(); ?>
 	</div>
 
 	<div class="env-block" id="blue">
-		<div class="env-media fade-up"><?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The Blue environment: a mixed-age group, a four-year-old showing a three-year-old the colour tablets while another four-year-old works alone with the bead chains nearby, wide frame' ); ?></div>
+		<div class="env-media fade-up"><?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/sixteen.jpg' ); ?></div>
 		<div class="fade-up d1">
 			<div class="label">from 3 years</div>
 			<h3 class="h3">Blue <span style="font-weight:300;color:var(--ink-light)">&middot; the Children's House</span></h3>
@@ -100,8 +174,26 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="env-block flip" id="eyfs">
-		<div class="env-media fade-up"><?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The EYFS year: a five-year-old reading aloud to a mentor from a small book, a puzzle map of the world on the table, afternoon light' ); ?></div>
+		<div class="env-block flip" id="yellow">
+		<div class="env-media fade-up"><?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/seveteen.jpg' ); ?></div>
+		<div class="fade-up d1">
+			<div class="label">from 5 years</div>
+			<h3 class="h3">Yellow <span style="font-weight:300;color:var(--ink-light)">&middot; Early Years Foundation Stage</span></h3>
+			<div class="prose">
+				<p>In the final year of the House, the child's Montessori work is mapped to the Early Years Foundation Stage (EYFS): three prime areas of learning, in communication and language, physical development, and personal, social and emotional development, and four specific areas, in literacy, mathematics, understanding the world, and expressive arts and design. The materials and the mentor's role do not change; the framework gives families and the primary school a shared account of what the child has achieved.</p>
+				<p>This is the bridge to Cambridge Primary at The Ardee School, the feeder pathway from the Houses. Children leave EYFS having worked with letters, words and number in the concrete, and, above all, able to choose, begin, complete and put away a piece of work without being asked.</p>
+			</div>
+			<div class="env-meta">
+				<div><b>Ages</b><span>from 5 years</span></div>
+				<div><b>Hours</b><span>9:00 AM to 1:30 PM, Monday to Friday</span></div>
+				<div><b>Framework</b><span>Montessori, mapped to EYFS</span></div>
+				<div><b>Next step</b><span>Cambridge Primary, The Ardee School</span></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="env-block" id="eyfs">
+			<div class="env-media fade-up"><?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/seveteen.jpg' ); ?></div>
 		<div class="fade-up d1">
 			<div class="label">from 5 years</div>
 			<h3 class="h3">EYFS <span style="font-weight:300;color:var(--ink-light)">&middot; Early Years Foundation Stage</span></h3>
@@ -116,68 +208,14 @@ get_header(); ?>
 				<div><b>Next step</b><span>Cambridge Primary, The Ardee School</span></div>
 			</div>
 		</div>
+
+	
 	</div>
 
 	</div>
 </section>
 
-<section class="section" id="areas">
-	<div class="wrap">
-		<div class="head"><div class="eyebrow">Across every environment</div><h2 class="title">The areas <em>of learning</em>.</h2><p class="lead">The programme spans practical life activities, sensorial education, cultural subjects, mathematics and language arts, with performing arts, mindfulness and grace and courtesy lessons woven through every day.</p></div>
-		<div class="g4">
-			<div class="fade-up d0"><div class="tile"><h4 class="h4">Practical life activities</h4><p>Real tasks with real tools: pouring, dressing, food preparation, care of the environment.</p></div></div>
-			<div class="fade-up d1"><div class="tile"><h4 class="h4">Sensorial education</h4><p>Materials that isolate one quality at a time, so the senses become instruments of classification.</p></div></div>
-			<div class="fade-up d2"><div class="tile"><h4 class="h4">Language arts</h4><p>Spoken language, sandpaper letters, the moveable alphabet, first reading and writing.</p></div></div>
-			<div class="fade-up d3"><div class="tile"><h4 class="h4">Mathematics</h4><p>Number rods, spindles, golden beads and bead chains: quantity before symbol, symbol before abstraction.</p></div></div>
-			<div class="fade-up d0"><div class="tile"><h4 class="h4">Cultural subjects</h4><p>Geography, botany, zoology, history and the arts, through puzzle maps, nomenclature cards and living things.</p></div></div>
-			<div class="fade-up d1"><div class="tile"><h4 class="h4">Performing arts</h4><p>Music, movement and performance as part of the programme in every environment.</p></div></div>
-			<div class="fade-up d2"><div class="tile"><h4 class="h4">Mindfulness, grace and courtesy</h4><p>Daily lessons in the manner of the House: greeting, waiting, helping, resolving, resting.</p></div></div>
-			<div class="fade-up d3"><div class="tile"><h4 class="h4">Peace education</h4><p>Calm environments, respectful relationships and purposeful work that nurtures self-discipline, empathy and responsibility.</p></div></div>
-		</div>
-	</div>
-</section>
 
-<section class="section blue on-dark" id="sports">
-	<div class="wrap g2">
-		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'Montessori Sports outdoors: a small group of three- and four-year-olds balancing along a low beam with a mentor walking alongside, grass and sky, movement slightly blurred' ); ?>
-		</div>
-		<div class="fade-up d1">
-			<div class="head"><div class="eyebrow">Montessori Sports</div><h2 class="title">Movement as <em>intelligence in action</em>.</h2></div>
-			<div class="prose">
-				<p>At Ardee Montessori Houses, sports is positioned not as an extracurricular add-on, but as a core developmental pillar aligned with Montessori philosophy, child psychology, and contemporary best practices in movement education. The programme supports gross motor development and neuromuscular coordination, builds executive function through rule-based games, fosters self-discipline, resilience and teamwork, and encourages joyful, non-competitive engagement with physical activity.</p>
-				<p>The emphasis is on process over performance and personal mastery over comparison.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section off" id="enrichment">
-	<div class="wrap g2 top">
-		<div class="fade-up">
-			<div class="head"><div class="eyebrow">After-school enrichment</div><h2 class="title">Optional, <em>and unhurried</em>.</h2><p class="lead">Beyond the Montessori day, the Houses offer four strands of after-school enrichment for families who want them.</p></div>
-			<div class="chips"><span class="chip">Art and Design</span><span class="chip">Music and Movement</span><span class="chip">Montessori Sports</span><span class="chip">Literature Appreciation</span></div>
-			<p class="mt-6 small">After-school enrichment is optional. <span class="ph-marker">[INSERT: enrichment days, times and fees at Noida]</span></p>
-		</div>
-		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'Music and Movement enrichment: children with small percussion instruments in a circle, a mentor with a guitar, late afternoon light' ); ?>
-		</div>
-	</div>
-</section>
-
-<section class="section" id="beyond">
-	<div class="wrap">
-		<div class="head"><div class="eyebrow">Beyond the House</div><h2 class="title">Cambridge Primary, <em>the feeder pathway</em>.</h2><p class="lead">The Houses are the first stage of the Ardee Academic Continuum. Cambridge Primary at The Ardee School is the feeder pathway that follows, and the continuum runs without a change of philosophy through Cambridge Lower Secondary, the Cambridge International General Certificate of Secondary Education (IGCSE) and Cambridge International Advanced Levels (A Levels).</p></div>
-		<div class="journey fade-up">
-			<div><small>The House</small><b>Montessori</b><span>Hands-on exploration, purposeful work, self-directed learning.</span></div>
-			<div><small>The Ardee School</small><b>Primary</b><span>Literacy, numeracy, inquiry, creativity.</span></div>
-			<div><small>The Ardee School</small><b>Lower Secondary</b><span>Depth, labs, structured projects.</span></div>
-			<div><small>The Ardee School</small><b>IGCSE</b><span>Academic rigour and subject choice.</span></div>
-			<div><small>The Ardee School</small><b>A Levels</b><span>Specialisation and global university preparation.</span></div>
-		</div>
-		<p class="small mt-6" style="max-width:720px"><span class="ph-marker">[CONFIRM: the progression route from this House to The Ardee School, New Friends Colony, and whether places are guaranteed]</span></p>
-	</div>
-</section>
 
 <section class="cta-band">
 	<div class="wrap">

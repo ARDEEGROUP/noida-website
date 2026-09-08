@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>The exterior or entrance of the Noida House in the late afternoon, gate open, a family leaving hand in hand, the building name visible</span></div>
+
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>Contact and Visit</span></nav>
 		<div class="eyebrow light">Contact and Visit</div>
@@ -42,15 +42,14 @@ get_header(); ?>
 			<div class="panel">
 				<div class="panel-label"><?php bloginfo( 'name' ); ?></div>
 				<div class="info-list">
-					<div><b>Address</b><span><?php echo nl2br( esc_html( get_theme_mod( 'ardee_address', "Lotus Boulevard, Sector 100\nNoida 201301" ) ) ); ?></span></div>
+					<div><b>Address</b><span><?php echo nl2br( esc_html( get_theme_mod( 'ardee_address', "The Ardee Montessori House, Noida Lotus Boulevard, Sector 100 Noida 201301" ) ) ); ?></span></div>
 					<div><b>Telephone</b><span><a href="tel:18001027333">180010ARDEE (18001027333)</a></span></div>
-					<div><b>Email</b><span><a href="mailto:<?php echo esc_attr( get_theme_mod( 'ardee_email', 'admissions@noida.theardeeschool.com' ) ); ?>"><?php echo esc_html( get_theme_mod( 'ardee_email', 'admissions@noida.theardeeschool.com' ) ); ?></a></span></div>
-					<div><b>Hours</b><span>Monday to Friday, 8:00 AM to 4:00 PM Indian Standard Time (IST)</span></div>
+					<div><b>Email</b><span><a href="mailto:<?php echo esc_attr( get_theme_mod( 'ardee_email', 'contactusnoida@ardeemontessorihouse.com' ) ); ?>"><?php echo esc_html( get_theme_mod( 'ardee_email', 'contactusnoida@ardeemontessorihouse.com' ) ); ?></a></span></div>
+					<div><b>Hours</b><span>Monday to Friday, 8:30 AM to 3:00 PM Indian Standard Time (IST)</span></div>
 					<div><b>Head of School</b><span>Ms. Sunjeet Kaur</span></div>
 					<div><b>Group</b><span><a href="tel:18001027333">180010ARDEE (18001027333)</a><br><a href="https://theardeeschools.com/contact-us/" target="_blank" rel="noopener">theardeeschools.com/contact-us</a></span></div>
 				</div>
-				<p class="small mt-6"><span class="ph-marker">[CONFIRM: postal address; the earlier Noida site lists "Lotus Boulevard, 3C Complex, Sector 100, Noida 201301"]</span></p>
-				<p class="small mt-6"><span class="ph-marker">[CONFIRM: campus email address; the address shown is the one listed on the Ardee School campus sites]</span></p>
+				
 			</div>
 		</div>
 	</div>
@@ -62,23 +61,21 @@ get_header(); ?>
 			<div class="head"><div class="eyebrow">Visit</div><h2 class="title">In person, <em>or from home</em>.</h2><p class="lead">School tours are offered both virtually and in person. The virtual tour shows the prepared environments as they are; the visit shows them in use.</p></div>
 			<div class="btn-row"><a class="btn btn-blue" href="#top">Book a Tour</a><a class="btn btn-ghost" href="https://my.matterport.com/show/?m=igBGNTJpU95" target="_blank" rel="noopener">Take the Virtual Tour</a></div>
 			<div class="info-list mt-8">
-				<div><b>Tours</b><span>[INSERT: tour days and times at Noida]</span></div>
-				<div><b>Open mornings</b><span>[INSERT: open morning dates for 2026-27]</span></div>
-				<div><b>Directions</b><span>[INSERT: directions and nearest landmarks or metro station]</span></div>
+				<div><b>Tours</b><span>Monday To Saturday</span></div>
+				<div><b>Open mornings</b><span>8:30 AM to 3:30 PM</span></div>
+				<div><b>Directions</b><span>Lotus Boulevard, Sector 100 Noida</span></div>
 			</div>
 		</div>
-		<div class="fade-up d1">
-			<?php
-			/**
-			 * Swap this placeholder for an embedded Google Map:
-			 * <iframe src="[INSERT: Google Maps embed URL for the
-			 * campus address]" style="width:100%;height:100%;
-			 * border:0;border-radius:16px" loading="lazy"></iframe>
-			 * wrapped in a <div class="ph std" style="background:none">
-			 */
-			ardee_placeholder( 'std', 'Map placeholder · replace with embedded map', 'An embedded map of the Noida House location, replacing this panel. [INSERT: map embed link]' );
-			?>
-		</div>
+	<div class="fade-up d1">
+    <div class="ph std" style="background:none;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.800167886082!2d77.36622037570665!3d28.545725588017074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce75832001661%3A0xd51756c8a894bde7!2sArdee%20Montessori%20House%2C%20Noida!5e0!3m2!1sen!2sin!4v1788758467244!5m2!1sen!2sin"
+            style="width:100%;height:100%;border:0;border-radius:16px;"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
 	</div>
 </section>
 

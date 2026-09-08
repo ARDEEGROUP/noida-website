@@ -19,13 +19,13 @@
 <header id="site-header">
 	<div class="header-inner">
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php bloginfo( 'name' ); ?>, home">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
-			<?php else : ?>
-				<span class="amark" aria-hidden="true">A</span>
-				<span class="wordmark"><b>The Ardee <em>Montessori House</em></b><small><?php bloginfo( 'name' ); ?></small></span>
-			<?php endif; ?>
-		</a>
+    <?php if ( has_custom_logo() ) : ?>
+        <?php the_custom_logo(); ?>
+    <?php else : ?>
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/amh.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="height:60px;width:auto;">
+       
+    <?php endif; ?>
+</a>
 
 		<nav aria-label="Primary">
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -48,8 +48,6 @@
 							<li><a href="<?php echo esc_url( ardee_link( 'people' ) ); ?>">Our People</a></li>
 						</ul>
 					</li>
-					<li><a href="<?php echo esc_url( ardee_link( 'environments' ) ); ?>">Environments</a></li>
-					<li><a href="<?php echo esc_url( ardee_link( 'day' ) ); ?>">A Day at the House</a></li>
 					<li class="has-sub">
 						<button type="button" aria-haspopup="true" aria-expanded="false">Admissions</button>
 						<ul class="sub-menu">
@@ -58,6 +56,12 @@
 							<li><a href="<?php echo esc_url( ardee_link( 'admissions/faq' ) ); ?>">Frequently Asked Questions</a></li>
 						</ul>
 					</li>
+					<li><a href="<?php echo esc_url( ardee_link( 'environments' ) ); ?>">Environments</a></li>
+					<li><a href="<?php echo esc_url( ardee_link( 'campus' ) ); ?>">Campus</a></li>
+					<li><a href="<?php echo esc_url( ardee_link( 'community' ) ); ?>">Community</a></li>
+
+					<li><a href="<?php echo esc_url( ardee_link( 'day' ) ); ?>">A Day at AMH</a></li>
+					
 					<li class="has-sub">
 						<button type="button" aria-haspopup="true" aria-expanded="false">Parents</button>
 						<ul class="sub-menu">
@@ -71,7 +75,7 @@
 		</nav>
 
 		<div class="header-right">
-			<a href="<?php echo esc_url( ardee_link( 'contact' ) ); ?>" class="apply-btn">Enquire Now</a>
+			<a href="<?php echo esc_url( ardee_link( 'contact' ) ); ?>" class="apply-btn">Apply Now</a>
 			<button id="menuBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><span></span><span></span><span></span></button>
 		</div>
 	</div>

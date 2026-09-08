@@ -6,7 +6,6 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>A wide, quiet view of a prepared environment before the children arrive: low open shelves with the pink tower, brown stair and colour tablets in order, floor mats rolled, morning light across a wooden floor</span></div>
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>About</span><span>/</span><span>Our Philosophy</span></nav>
 		<div class="eyebrow light">Our Philosophy</div>
@@ -30,7 +29,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'portrait', 'Image placeholder · 1200 by 1500, portrait', 'A single child, around four, standing at a low table working with the golden bead material, both hands engaged, seen in profile, background softly out of focus' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/nine.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -38,7 +37,7 @@ get_header(); ?>
 <section class="section off" id="environment">
 	<div class="wrap g2 top">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', "The practical life shelf at child height: small jugs, a dressing frame, polishing cloths and a tray of buttons, each item in its place, a child's hand reaching for a tray" ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/ten.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">The prepared environment</div><h2 class="title">Every object <em>has a purpose</em>.</h2><p class="lead">Authentic Montessori apparatus invite children to learn through their senses, refine perception, and make abstract ideas concrete. Each material has a clear purpose and supports hands-on discovery.</p></div>
@@ -67,7 +66,7 @@ get_header(); ?>
 			<div class="btn-row"><a class="btn btn-blue" href="<?php echo esc_url( ardee_link( 'people' ) ); ?>">Meet Our People</a></div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'portrait', 'Image placeholder · 1200 by 1500, portrait', 'A mentor seated on a low chair observing two children at work, notebook open on her knee, her attention on the children and not the camera, soft daylight' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/eight.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -127,7 +126,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A five-year-old writing with a pencil in a small notebook beside the moveable alphabet, a completed word laid out in wooden letters, focus on the hands' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/elve.jpg' ); ?>
 		</div>
 	</div>
 </section>

@@ -4,14 +4,18 @@
 	<div class="wrap">
 		<div class="cols">
 			<div>
-				<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php bloginfo( 'name' ); ?>, home">
-					<span class="amark" aria-hidden="true">A</span>
-					<span class="wordmark"><b>The Ardee <em>Montessori House</em></b><small><?php bloginfo( 'name' ); ?></small></span>
-				</a>
+					<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php bloginfo( 'name' ); ?>, home">
+    <?php if ( has_custom_logo() ) : ?>
+        <?php the_custom_logo(); ?>
+    <?php else : ?>
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="height:100px;width:auto;">
+       
+    <?php endif; ?>
+</a>
 				<p>Our curriculum, teaching methodology and global perspective make our students feel at home with the world.</p>
 				<p><?php echo nl2br( esc_html( get_theme_mod( 'ardee_address', "Lotus Boulevard, Sector 100\nNoida 201301" ) ) ); ?></p>
 				<p><a href="tel:18001027333">180010ARDEE (18001027333)</a></p>
-				<p><a href="mailto:<?php echo esc_attr( get_theme_mod( 'ardee_email', 'admissions@noida.theardeeschool.com' ) ); ?>"><?php echo esc_html( get_theme_mod( 'ardee_email', 'admissions@noida.theardeeschool.com' ) ); ?></a></p>
+				<p><a href="mailto:<?php echo esc_attr( get_theme_mod( 'ardee_email', 'contactusnoida@ardeemontessorihouse.com' ) ); ?>"><?php echo esc_html( get_theme_mod( 'ardee_email', 'contactusnoida@ardeemontessorihouse.com' ) ); ?></a></p>
 			</div>
 			<div>
 				<h3>About the House</h3>
@@ -53,7 +57,7 @@
 					<li><a class="ext" href="https://theardeeschools.com/blogs/" target="_blank" rel="noopener">News</a></li>
 				</ul>
 				<?php endif; ?>
-				<?php if ( is_active_sidebar( 'footer-1' ) ) : dynamic_sidebar( 'footer-1' ); endif; ?>
+				
 			</div>
 		</div>
 		<div class="foot-bar">

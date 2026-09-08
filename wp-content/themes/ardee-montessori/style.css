@@ -185,7 +185,7 @@ em{font-style:italic}
 /* ---------- header ---------- */
 #site-header{position:fixed;top:0;left:0;right:0;z-index:9999;background:transparent;transition:background .35s ease}
 #site-header .header-inner{
-  max-width:1152px;margin:16px auto;height:54px;padding:0 10px 0 16px;
+  max-width:1152px;margin:16px auto;height:60px;padding:0 10px 0 16px;
   display:flex;align-items:center;justify-content:space-between;gap:12px;
   border-radius:9999px;background:rgba(255,255,255,.92);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
@@ -195,7 +195,7 @@ em{font-style:italic}
 @media (max-width:1200px){#site-header .header-inner{margin:16px}}
 @media (max-width:640px){#site-header .header-inner{margin:12px;padding:0 8px 0 12px}}
 #site-header.scrolled .header-inner{background:var(--nav-scrolled);border-color:transparent;box-shadow:0 4px 24px rgba(0,0,0,.10)}
-.brand{display:flex;align-items:center;gap:10px;height:36px;color:var(--blue);flex-shrink:0}
+.brand{display:flex;align-items:center;gap:10px;color:var(--blue);flex-shrink:0}
 .brand .amark{width:34px;height:34px;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--red);position:relative}
 .brand .amark::after{content:"";position:absolute;left:5px;right:5px;bottom:2px;height:1.5px;background:var(--red);opacity:.9}
 .brand .wordmark{display:flex;flex-direction:column;line-height:1.05}
@@ -257,13 +257,18 @@ em{font-style:italic}
 .drawer-apply:hover{background:var(--red-hover)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;color:#fff;padding:200px 0 88px;
+.hero{
+  position:relative;overflow:hidden;color:#fff;padding:200px 0 88px;
   background:
     radial-gradient(ellipse at 78% 18%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 42%),
     linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
-    linear-gradient(160deg,#245b88 0%,#194264 46%,#0d2a42 100%);
-  background-size:auto,80px 80px,80px 80px,auto;}
+    linear-gradient(160deg, rgba(36,91,136,.58) 0%, rgba(25,66,100,.62) 46%, rgba(13,42,66,.70) 100%),
+    url('./assets/img/banner-one.jpg');
+  background-size:auto,80px 80px,80px 80px,auto,cover;
+  background-position:center,center,center,center,center;
+  background-repeat:no-repeat;
+}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:52%;background:linear-gradient(180deg,rgba(8,18,28,0) 0%,rgba(8,18,28,.6) 100%);pointer-events:none}
 .hero > *{position:relative;z-index:2}
 .hero.home{min-height:clamp(560px,74vh,780px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:180px}
@@ -286,7 +291,7 @@ em{font-style:italic}
 .hero-facts div{padding:18px 28px 0 0;margin-right:28px}
 .hero-facts b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;color:#fff;line-height:1.2}
 .hero-facts span{font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.45)}
-.anchor-bar{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);position:sticky;top:86px;z-index:40}
+.anchor-bar{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);position:unset;top:86px;z-index:40}
 @media (max-width:640px){.anchor-bar{top:78px}}
 .anchor-bar .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
 .anchor-bar .wrap::-webkit-scrollbar{display:none}
@@ -364,7 +369,7 @@ em{font-style:italic}
 @media (max-width:560px){.people{grid-template-columns:1fr}}
 .person .ph{margin-bottom:16px}
 .person b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;color:var(--blue);line-height:1.15}
-.person span{display:block;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin:6px 0 10px}
+.person span{display:block;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin:0px 0 0px}
 .person p{font-size:14px;line-height:1.75}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
@@ -452,3 +457,142 @@ footer.site-footer{background:var(--navy);color:#d1d5db;padding:48px 0 0}
 /* ---------- routing ---------- */
 .page{display:block}
 .page[hidden]{display:none!important}
+
+
+/* ---------- Cambridge Pathway card (Curriculum Overview section) ---------- */
+.pathway-card{
+  position:relative;overflow:hidden;border-radius:20px;
+  background:var(--blue-deep);
+  padding:40px 32px;
+}
+.pathway-card::before{
+  content:"";position:absolute;top:-30px;right:-30px;width:200px;height:200px;
+  border-radius:50%;background:rgba(255,255,255,.03);pointer-events:none;
+}
+.pathway-card-label{
+  position:relative;z-index:1;margin-bottom:24px;
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+}
+.pathway-list{position:relative;z-index:1;display:flex;flex-direction:column}
+.pathway-item{display:flex;align-items:stretch;gap:0}
+.pathway-rail{display:flex;flex-direction:column;align-items:center;margin-right:16px;flex-shrink:0}
+.pathway-dot{width:10px;height:10px;border-radius:50%;background:#fff;margin-bottom:4px;flex-shrink:0}
+.pathway-line{width:1px;flex:1;min-height:30px;background:rgba(255,255,255,.35)}
+.pathway-body{padding-bottom:24px}
+.pathway-item.last .pathway-body{padding-bottom:0}
+.pathway-stage{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:4px}
+.pathway-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
+.pathway-sub{font-size:12px;color:rgba(255,255,255,.4);line-height:1.5}
+
+@media (max-width:500px){
+  .pathway-card{padding:32px 20px}
+}
+
+/* ============================================================
+   ADMISSIONS PAGE — additional sections
+   Apply Now · Timings by Key-Stage · School Uniform · Term Dates
+   Append to style.css. Uses existing design tokens only.
+   ============================================================ */
+
+/* ---------- highlight box ---------- */
+.hl-box{background:rgba(25,66,100,.04);border:1.5px solid rgba(25,66,100,.12);border-radius:14px;padding:22px 26px;margin:28px 0}
+.hl-box strong{display:block;margin-bottom:6px;font-size:14px;color:var(--blue)}
+.hl-box p{font-size:14px;line-height:1.8;color:var(--ink-mid);margin:0}
+
+/* ---------- stage cards (Apply Now) ---------- */
+.stage-cards{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.stage-card{display:flex;align-items:flex-start;gap:16px;padding:22px;border-radius:16px;background:var(--off);border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
+.stage-card:hover{border-color:rgba(25,66,100,.2);box-shadow:0 6px 20px rgba(13,42,66,.06)}
+.stage-icon{width:44px;height:44px;border-radius:10px;background:var(--tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+.stage-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.stage-title{font-size:15px;font-weight:600;color:var(--blue);margin-bottom:5px}
+.stage-desc{font-size:13px;line-height:1.7;color:var(--ink-mid)}
+
+/* ---------- sidebar cards (Apply Now) ---------- */
+.side-card{background:var(--off);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px}
+.side-card:last-child{margin-bottom:0}
+.side-card-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.side-icon{width:38px;height:38px;border-radius:10px;background:var(--tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+.side-title{font-size:15px;font-weight:600;color:var(--blue)}
+.side-card p{font-size:13px;line-height:1.75;color:var(--ink-mid)}
+.status-dot{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--blue);margin-bottom:10px}
+.status-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.key-date-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.key-date-row:last-child{border-bottom:none}
+.key-date-row span:first-child{color:var(--ink-mid)}
+.key-date-row span:last-child{font-weight:600;color:var(--blue);font-size:12px}
+
+/* ---------- timing cards ---------- */
+.timing-card{padding:26px;border-radius:16px;background:var(--off);border:1px solid var(--border);transition:box-shadow .2s}
+.timing-card:hover{box-shadow:0 6px 20px rgba(13,42,66,.06)}
+.timing-card.dark{background:var(--blue);border-color:var(--blue);color:#fff}
+.timing-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.timing-card.dark .timing-tag{color:rgba(255,255,255,.45)}
+.timing-title{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--blue);margin-bottom:10px}
+.timing-card.dark .timing-title{color:#fff}
+.timing-time{font-size:15px;font-weight:600;color:var(--ink)}
+.timing-card.dark .timing-time{color:#fff}
+.timing-note{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;font-weight:500;color:var(--ink-light)}
+.timing-card.dark .timing-note{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.5)}
+
+/* ---------- Structure of the Day: tabs + document list ---------- */
+.sotd-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.sotd-tab{font-size:13px;font-weight:600;padding:8px 20px;border-radius:999px;border:1.5px solid var(--border);background:#fff;color:var(--ink-mid);cursor:pointer;transition:.18s}
+.sotd-tab:hover{border-color:var(--blue);color:var(--blue)}
+.sotd-tab.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.sotd-subtab{font-size:12px;font-weight:600;padding:6px 16px;border-radius:999px;border:1.5px solid var(--border);background:transparent;color:var(--ink-mid);cursor:pointer;transition:.18s}
+.sotd-subtab:hover{border-color:var(--red);color:var(--red)}
+.sotd-subtab.active{background:var(--red);border-color:var(--red);color:#fff}
+.sotd-panel[hidden],.sotd-subpanel[hidden]{display:none}
+.sotd-pdf-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:768px){.sotd-pdf-list{grid-template-columns:1fr}}
+.sotd-pdf-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;border:1.5px solid var(--border);background:#fff;text-decoration:none;transition:border-color .18s,box-shadow .18s}
+.sotd-pdf-item:hover{border-color:var(--red);box-shadow:0 2px 12px rgba(153,39,35,.08)}
+.sotd-pdf-icon{width:32px;height:38px;border-radius:6px;background:rgba(153,39,35,.09);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red)}
+.sotd-pdf-name{font-size:13px;font-weight:600;color:var(--blue)}
+.sotd-pdf-meta{font-size:10px;color:var(--ink-light);margin-top:2px;text-transform:uppercase;letter-spacing:.5px}
+.sotd-pdf-arrow{margin-left:auto;color:var(--red);flex-shrink:0}
+
+/* ---------- uniform: colour swatches + values ---------- */
+.swatch{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;padding:6px 13px;border-radius:999px}
+.swatch-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.value-list{display:flex;flex-direction:column;margin-top:22px}
+.value-row{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.value-row:last-child{border-bottom:none}
+.value-bar{width:3px;height:32px;border-radius:2px;flex-shrink:0;margin-top:2px}
+.value-title{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:2px}
+.value-desc{font-size:12px;color:var(--ink-light)}
+
+/* ---------- uniform cards ---------- */
+.uni-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow .2s}
+.uni-card:hover{box-shadow:0 6px 20px rgba(13,42,66,.06)}
+.uni-card .ph{border-radius:0}
+.uni-card-body{padding:20px}
+.uni-card-body .stage-tag{margin-bottom:4px}
+.uni-card-body .stage-title{margin-bottom:5px;font-size:15px}
+.uni-card-body .stage-desc{font-size:12px}
+
+/* ---------- stat boxes (Term Dates) ---------- */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.stat-box{padding:20px 12px;border-radius:14px;background:var(--off);border:1px solid var(--border);text-align:center}
+.stat-box b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--blue);margin-bottom:4px;line-height:1.1}
+.stat-box span{font-size:10.5px;font-weight:500;color:var(--ink-light);line-height:1.3;display:block}
+
+/* ---------- calendar table ---------- */
+.cal-table-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--border);overflow-x:auto}
+.cal-table{width:100%;border-collapse:collapse;min-width:480px}
+.cal-table thead th{background:var(--blue);color:rgba(255,255,255,.7);text-align:left;padding:14px 20px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
+.cal-table tbody td{padding:16px 20px;font-size:13px;color:var(--ink-mid);border-top:1px solid var(--border)}
+.cal-table tbody tr.is-break{background:var(--off)}
+.cal-dot{display:inline-flex;align-items:center;gap:8px}
+.cal-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,var(--blue));flex-shrink:0}
+.cal-period{font-weight:600;color:var(--blue)}
+.cal-period.is-break{font-weight:500;color:var(--ink-mid)}
+@media (max-width:640px){.cal-table thead th:nth-child(3),.cal-table tbody td:nth-child(3){display:none}}
+
+/* ---------- note box ---------- */
+.note-box{border-radius:14px;padding:22px 24px;margin-top:18px;background:rgba(153,39,35,.05);border:1.5px solid rgba(153,39,35,.15);display:flex;gap:14px;align-items:flex-start}
+.note-icon{width:22px;height:22px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.note-box strong{display:block;font-size:13px;color:var(--red);margin-bottom:4px}
+.note-box p{font-size:13px;line-height:1.75;color:var(--ink-mid);margin:0}

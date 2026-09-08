@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>Arrival at 9:00 AM: a child greeting the mentor at the environment door while a parent waits a step behind, shoes lined up on a low rack, morning light through the entrance</span></div>
+	
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>A Day at the House</span></nav>
 		<div class="eyebrow light">A Day at the House</div>
@@ -16,7 +16,7 @@ get_header(); ?>
 </section>
 
 <div class="anchor-bar"><div class="wrap">
-	<a href="#rhythm">The rhythm</a><a href="#structure">Structure of the Day</a><a href="#nido-day">NIDO</a><a href="#parents-day">The parent's day</a>
+	<a href="#rhythm">The rhythm</a><a href="#structure">Structure of the Day</a><a href="#nido-day">NIDO</a><a href="#parents-day">The parent's day</a><a href="#areas">Areas of learning</a><a href="#sports">Montessori Sports</a><a href="#enrichment">Enrichment</a><a href="#beyond">Beyond the House</a>
 </div></div>
 
 <section class="section" id="rhythm">
@@ -36,9 +36,9 @@ get_header(); ?>
 			<p class="small mt-8"><span class="ph-marker">[INSERT: the confirmed Structure of the Day for each environment at Noida, with times]</span></p>
 		</div>
 		<div class="fade-up d1 stack">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'Mid work cycle: a wide view of the environment with six or seven children each at a different piece of work, the mentor kneeling beside one of them, quiet and ordered' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The meal: children seated at small tables with cloth napkins, one child pouring water for another, a mentor seated among them' ); ?>
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'Departure at 1:30 PM: a child putting on their own shoes at the low bench, bag on shoulder, parent visible at the gate' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twenty.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentyone.jpg' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentytwo.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -67,7 +67,7 @@ get_header(); ?>
 <section class="section" id="nido-day">
 	<div class="wrap g2">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A NIDO session: three parent and toddler pairs on low mats, a mentor demonstrating the object permanence box, the room calm and uncluttered' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentyfour.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">NIDO</div><h2 class="title">A shorter day, <em>shared</em>.</h2></div>
@@ -90,8 +90,67 @@ get_header(); ?>
 			<div class="btn-row"><a class="btn btn-blue" href="<?php echo esc_url( ardee_link( 'parents' ) ); ?>">Parent Partnership</a><a class="btn btn-ghost" href="<?php echo esc_url( ardee_link( 'contact' ) ); ?>">Book a Tour</a></div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'portrait', 'Image placeholder · 1200 by 1500, portrait', "A parent's hand holding a phone showing the day's classroom photographs in the parent communication app, the child visible on screen at work, warm domestic setting; screen content to be supplied" ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentyfive.jpg' ); ?>
 		</div>
+	</div>
+</section>
+
+
+<section class="section" id="areas">
+	<div class="wrap">
+		<div class="head"><div class="eyebrow">Across every environment</div><h2 class="title">The areas <em>of learning</em>.</h2><p class="lead">The programme spans practical life activities, sensorial education, cultural subjects, mathematics and language arts, with performing arts, mindfulness and grace and courtesy lessons woven through every day.</p></div>
+		<div class="g4">
+			<div class="fade-up d0"><div class="tile"><h4 class="h4">Practical life activities</h4><p>Real tasks with real tools: pouring, dressing, food preparation, care of the environment.</p></div></div>
+			<div class="fade-up d1"><div class="tile"><h4 class="h4">Sensorial education</h4><p>Materials that isolate one quality at a time, so the senses become instruments of classification.</p></div></div>
+			<div class="fade-up d2"><div class="tile"><h4 class="h4">Language arts</h4><p>Spoken language, sandpaper letters, the moveable alphabet, first reading and writing.</p></div></div>
+			<div class="fade-up d3"><div class="tile"><h4 class="h4">Mathematics</h4><p>Number rods, spindles, golden beads and bead chains: quantity before symbol, symbol before abstraction.</p></div></div>
+			<div class="fade-up d0"><div class="tile"><h4 class="h4">Cultural subjects</h4><p>Geography, botany, zoology, history and the arts, through puzzle maps, nomenclature cards and living things.</p></div></div>
+			<div class="fade-up d1"><div class="tile"><h4 class="h4">Performing arts</h4><p>Music, movement and performance as part of the programme in every environment.</p></div></div>
+			<div class="fade-up d2"><div class="tile"><h4 class="h4">Mindfulness, grace and courtesy</h4><p>Daily lessons in the manner of the House: greeting, waiting, helping, resolving, resting.</p></div></div>
+			<div class="fade-up d3"><div class="tile"><h4 class="h4">Peace education</h4><p>Calm environments, respectful relationships and purposeful work that nurtures self-discipline, empathy and responsibility.</p></div></div>
+		</div>
+	</div>
+</section>
+
+<section class="section blue on-dark" id="sports">
+	<div class="wrap g2">
+		<div class="fade-up">
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/eighteen.jpg' ); ?>
+		</div>
+		<div class="fade-up d1">
+			<div class="head"><div class="eyebrow">Montessori Sports</div><h2 class="title">Movement as <em>intelligence in action</em>.</h2></div>
+			<div class="prose">
+				<p>At Ardee Montessori Houses, sports is positioned not as an extracurricular add-on, but as a core developmental pillar aligned with Montessori philosophy, child psychology, and contemporary best practices in movement education. The programme supports gross motor development and neuromuscular coordination, builds executive function through rule-based games, fosters self-discipline, resilience and teamwork, and encourages joyful, non-competitive engagement with physical activity.</p>
+				<p>The emphasis is on process over performance and personal mastery over comparison.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section off" id="enrichment">
+	<div class="wrap g2 top">
+		<div class="fade-up">
+			<div class="head"><div class="eyebrow">After-school enrichment</div><h2 class="title">Optional, <em>and unhurried</em>.</h2><p class="lead">Beyond the Montessori day, the Houses offer four strands of after-school enrichment for families who want them.</p></div>
+			<div class="chips"><span class="chip">Art and Design</span><span class="chip">Music and Movement</span><span class="chip">Montessori Sports</span><span class="chip">Literature Appreciation</span></div>
+			<p class="mt-6 small">After-school enrichment is optional. <span class="ph-marker">[INSERT: enrichment days, times and fees at Noida]</span></p>
+		</div>
+		<div class="fade-up d1">
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/nineteen.jpg' ); ?>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="beyond">
+	<div class="wrap">
+		<div class="head"><div class="eyebrow">Beyond the House</div><h2 class="title">Cambridge Primary, <em>the feeder pathway</em>.</h2><p class="lead">The Houses are the first stage of the Ardee Academic Continuum. Cambridge Primary at The Ardee School is the feeder pathway that follows, and the continuum runs without a change of philosophy through Cambridge Lower Secondary, the Cambridge International General Certificate of Secondary Education (IGCSE) and Cambridge International Advanced Levels (A Levels).</p></div>
+		<div class="journey fade-up">
+			<div><small>The House</small><b>Montessori</b><span>Hands-on exploration, purposeful work, self-directed learning.</span></div>
+			<div><small>The Ardee School</small><b>Primary</b><span>Literacy, numeracy, inquiry, creativity.</span></div>
+			<div><small>The Ardee School</small><b>Lower Secondary</b><span>Depth, labs, structured projects.</span></div>
+			<div><small>The Ardee School</small><b>IGCSE</b><span>Academic rigour and subject choice.</span></div>
+			<div><small>The Ardee School</small><b>A Levels</b><span>Specialisation and global university preparation.</span></div>
+		</div>
+		<p class="small mt-6" style="max-width:720px"><span class="ph-marker">[CONFIRM: the progression route from this House to The Ardee School, New Friends Colony, and whether places are guaranteed]</span></p>
 	</div>
 </section>
 

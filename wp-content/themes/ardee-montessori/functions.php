@@ -150,24 +150,97 @@ function ardee_form_shortcode() {
 }
 add_shortcode( 'ardee_form', 'ardee_form_shortcode' );
 
+/* ---------------------------------------------------------
+   Postmark mail helper.
+
+   Requires a Postmark Server API Token, defined as a constant
+   in wp-config.php (NOT in this theme file, so it never ends
+   up in a theme editor, backup, or version control):
+
+       define( 'ARDEE_POSTMARK_TOKEN', 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' );
+
+   The "From" address below must be a Verified Sender Signature
+   (or an address on a Verified Domain) in your Postmark account
+   - Postmark will reject the send otherwise.
+   [CONFIRM: the verified From address/domain to send from]
+--------------------------------------------------------- */
+function ardee_send_via_postmark( $to, $subject, $text_body, $reply_to = '' ) {
+	if ( ! defined( 'ARDEE_POSTMARK_TOKEN' ) || ! ARDEE_POSTMARK_TOKEN ) {
+		error_log( 'Ardee enquiry form: ARDEE_POSTMARK_TOKEN is not defined in wp-config.php.' );
+		return false;
+	}
+
+	$payload = array(
+		'From'          => 'Ardee Montessori House <noreply@ardeemontessorihouse.com>', // [CONFIRM: must be a verified Postmark sender]
+		'To'            => $to,
+		'Subject'       => $subject,
+		'TextBody'      => $text_body,
+		'MessageStream' => 'outbound',
+	);
+	if ( $reply_to ) {
+		$payload['ReplyTo'] = $reply_to;
+	}
+
+	$response = wp_remote_post( 'https://api.postmarkapp.com/email', array(
+		'headers' => array(
+			'Accept'                  => 'application/json',
+			'Content-Type'            => 'application/json',
+			'X-Postmark-Server-Token' => ARDEE_POSTMARK_TOKEN,
+		),
+		'body'    => wp_json_encode( $payload ),
+		'timeout' => 15,
+	) );
+
+	if ( is_wp_error( $response ) ) {
+		error_log( 'Ardee enquiry form: Postmark request failed - ' . $response->get_error_message() );
+		return false;
+	}
+
+	$code = wp_remote_retrieve_response_code( $response );
+	if ( $code < 200 || $code >= 300 ) {
+		error_log( 'Ardee enquiry form: Postmark returned ' . $code . ' - ' . wp_remote_retrieve_body( $response ) );
+		return false;
+	}
+
+	return true;
+}
+
 /**
- * Basic admin-post handler for the fallback form above.
- * Sends a plain email to the site admin. Replace with a form
- * plugin for spam protection, validation and CRM integration.
+ * Admin-post handler for the fallback form above.
+ * Sends the enquiry to a fixed inbox via Postmark, with the
+ * enquirer's own email set as Reply-To so replying goes
+ * straight to them. Falls back to wp_mail() to the site admin
+ * if the Postmark send fails for any reason, so an enquiry is
+ * never silently dropped.
  */
 function ardee_handle_enquiry() {
 	if ( ! isset( $_POST['ardee_enquiry_nonce'] ) || ! wp_verify_nonce( $_POST['ardee_enquiry_nonce'], 'ardee_enquiry' ) ) {
 		wp_die( 'Security check failed.' );
 	}
-	$to      = get_option( 'admin_email' );
-	$subject = 'New enquiry from ' . get_bloginfo( 'name' );
-	$lines   = array();
+
+	$to             = 'contactusnoida@ardeemontessorihouse.com';
+	$subject        = 'New enquiry from ' . get_bloginfo( 'name' );
+	$lines          = array();
+	$enquirer_email = '';
+
 	foreach ( array( 'first_name', 'last_name', 'email', 'phone', 'dob', 'type', 'message' ) as $field ) {
 		if ( ! empty( $_POST[ $field ] ) ) {
-			$lines[] = ucfirst( str_replace( '_', ' ', $field ) ) . ': ' . sanitize_text_field( wp_unslash( $_POST[ $field ] ) );
+			$value   = sanitize_text_field( wp_unslash( $_POST[ $field ] ) );
+			$lines[] = ucfirst( str_replace( '_', ' ', $field ) ) . ': ' . $value;
+			if ( $field === 'email' ) {
+				$enquirer_email = sanitize_email( $value );
+			}
 		}
 	}
-	wp_mail( $to, $subject, implode( "\n", $lines ) );
+
+	$body = implode( "\n", $lines );
+	$sent = ardee_send_via_postmark( $to, $subject, $body, $enquirer_email );
+
+	if ( ! $sent ) {
+		// Fallback so the enquiry is never lost if Postmark errors out
+		wp_mail( get_option( 'admin_email' ), $subject . ' (Postmark failed - fallback copy)', $body );
+	}
+
 	wp_safe_redirect( add_query_arg( 'enquiry', 'sent', wp_get_referer() ?: home_url( '/' ) ) );
 	exit;
 }

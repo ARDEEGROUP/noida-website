@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>A parent and mentor in quiet conversation at the environment door at pick-up, the child putting on shoes at the low bench between them, warm afternoon light</span></div>
+	
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>Parents</span><span>/</span><span>Parent Partnership</span></nav>
 		<div class="eyebrow light">Parent Partnership</div>
@@ -22,7 +22,7 @@ get_header(); ?>
 <section class="section" id="app">
 	<div class="wrap g2">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', "A phone in a parent's hand showing the day's classroom photographs in the parent communication app, with the child visible on screen; the app interface to be supplied" ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentyseve.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">Daily communication</div><h2 class="title">The day, <em>shared</em>.</h2></div>
@@ -45,7 +45,7 @@ get_header(); ?>
 			<div class="btn-row"><a class="btn btn-blue" href="<?php echo esc_url( ardee_link( 'contact' ) ); ?>">Book a Tour</a><a class="btn btn-ghost" href="https://my.matterport.com/show/?m=igBGNTJpU95" target="_blank" rel="noopener">Take the Virtual Tour</a></div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A parent seated on a low observation chair at the edge of the environment, notebook in hand, watching children at work without interrupting' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentyeight.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -94,7 +94,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', "A community gathering at the House: parents and children seated together outdoors for a celebration, the environment's doors open behind, late afternoon" ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/twentynine.jpg' ); ?>
 		</div>
 	</div>
 </section>

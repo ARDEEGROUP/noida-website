@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="hero on-dark">
 	<div class="accent-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-	<div class="hero-note"><b>Hero image placeholder · 2400 by 1350, landscape</b><span>The secure entrance of the House from inside: a low gate, a mentor receiving a child from a parent, the calm environment visible beyond, morning light</span></div>
+	
 	<div class="wrap">
 		<nav class="crumbs" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a><span>/</span><span>Parents</span><span>/</span><span>Safety and Wellbeing</span></nav>
 		<div class="eyebrow light">Safety and Wellbeing</div>
@@ -34,7 +34,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The reception desk of the House with a closed visitor register and a member of staff, no names legible, a child-height view of the entrance gate beyond, unobtrusive' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/thirty.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -42,7 +42,7 @@ get_header(); ?>
 <section class="section off" id="protection">
 	<div class="wrap g2 top">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'A mentor and an assistant in a staff training session, seated with a printed policy document, adults only, plain room' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/thirtytwo.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">Child protection</div><h2 class="title">A policy, <em>and the training behind it</em>.</h2></div>
@@ -75,7 +75,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="fade-up d1">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'Only once air quality monitoring is confirmed for this campus: an air quality monitor mounted on the environment wall beside a window, plants on the sill, a child working at a table in the foreground out of focus. Otherwise: an open window with plants on the sill and a child working at a table in the foreground' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/thirtythree.jpg' ); ?>
 		</div>
 	</div>
 </section>
@@ -83,7 +83,7 @@ get_header(); ?>
 <section class="section" id="food">
 	<div class="wrap g2">
 		<div class="fade-up">
-			<?php ardee_placeholder( 'std', 'Image placeholder · 1600 by 1200, landscape', 'The in-house kitchen or serving area: fresh vegetables being prepared, small plates stacked, a mentor carrying a covered dish towards the environment' ); ?>
+			<?php ardee_placeholder( 'portrait', 'Shri Ashok Varma, Founder', '', get_template_directory_uri() . '/assets/img/thirtyfour.jpg' ); ?>
 		</div>
 		<div class="fade-up d1">
 			<div class="head"><div class="eyebrow">Food</div><h2 class="title">Prepared fresh, <em>in-house</em>.</h2></div>
